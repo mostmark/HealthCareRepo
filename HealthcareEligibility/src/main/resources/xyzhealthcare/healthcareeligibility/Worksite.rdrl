@@ -1,0 +1,9 @@
+package xyzhealthcare.healthcareeligibility;
+
+import java.lang.Number;
+
+rule "Worksite"
+	dialect "mvel"
+	when
+	then
+end
