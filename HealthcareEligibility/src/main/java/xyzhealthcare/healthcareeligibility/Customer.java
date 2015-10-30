@@ -12,7 +12,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("state")
    private java.lang.String state;
    @org.kie.api.definition.type.Label("income")
-   private Double income;
+   private Float income;
    @org.kie.api.definition.type.Label("elegibilty")
    private Boolean eligibility;
 
@@ -40,17 +40,17 @@ public class Customer implements java.io.Serializable
       this.eligibility = eligibility;
    }
 
-   public java.lang.Double getIncome()
+   public java.lang.Float getIncome()
    {
       return this.income;
    }
 
-   public void setIncome(java.lang.Double income)
+   public void setIncome(java.lang.Float income)
    {
       this.income = income;
    }
 
-   public Customer(java.lang.String state, java.lang.Double income,
+   public Customer(java.lang.String state, java.lang.Float income,
          java.lang.Boolean eligibility)
    {
       this.state = state;
