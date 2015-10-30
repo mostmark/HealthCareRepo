@@ -9,12 +9,12 @@ public class Customer implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "state")
+   @org.kie.api.definition.type.Label("state")
    private java.lang.String state;
-   @org.kie.api.definition.type.Label(value = "income")
+   @org.kie.api.definition.type.Label("income")
    private java.lang.Float income;
-   @org.kie.api.definition.type.Label(value = "elegibilty")
-   private java.lang.Boolean eligibility;
+   @org.kie.api.definition.type.Label("elegibilty")
+   private boolean eligibility;
 
    public Customer()
    {
@@ -40,18 +40,18 @@ public class Customer implements java.io.Serializable
       this.income = income;
    }
 
-   public java.lang.Boolean getEligibility()
+   public boolean isEligibility()
    {
       return this.eligibility;
    }
 
-   public void setEligibility(java.lang.Boolean eligibility)
+   public void setEligibility(boolean eligibility)
    {
       this.eligibility = eligibility;
    }
 
    public Customer(java.lang.String state, java.lang.Float income,
-         java.lang.Boolean eligibility)
+         boolean eligibility)
    {
       this.state = state;
       this.income = income;
