@@ -14,7 +14,7 @@ public class Customer implements java.io.Serializable
    @org.kie.api.definition.type.Label("income")
    private java.lang.Float income;
    @org.kie.api.definition.type.Label("elegibilty")
-   private boolean eligibility;
+   private String eligibility;
 
    public Customer()
    {
@@ -40,18 +40,18 @@ public class Customer implements java.io.Serializable
       this.income = income;
    }
 
-   public boolean isEligibility()
+   public java.lang.String getEligibility()
    {
       return this.eligibility;
    }
 
-   public void setEligibility(boolean eligibility)
+   public void setEligibility(java.lang.String eligibility)
    {
       this.eligibility = eligibility;
    }
 
    public Customer(java.lang.String state, java.lang.Float income,
-         boolean eligibility)
+         java.lang.String eligibility)
    {
       this.state = state;
       this.income = income;
