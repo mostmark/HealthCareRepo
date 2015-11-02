@@ -1,2 +1,15 @@
 package xyzhealthcare.healthcareeligibility;
 
+import  xyzhealthcare.healthcareeligibility.*;
+ruleflow-group "EligibilityGroup"
+rule "Customer1"
+dialect "mvel"
+salience 20
+when
+then
+Customer $customer = new Customer();
+$customer.income=35000.0;
+$customer.state="Mass";
+end
+
+
