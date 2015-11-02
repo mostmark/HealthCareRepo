@@ -9,7 +9,7 @@ when
 then
 Customer $customer = new Customer();
 $customer.income=35000.0;
-$customer.state="Mass";
+$customer.state="Mass.";
 System.out.println("Customer Created");
 end
 
