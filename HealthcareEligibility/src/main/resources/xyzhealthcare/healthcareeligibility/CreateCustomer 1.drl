@@ -10,6 +10,7 @@ then
 Customer $customer = new Customer();
 $customer.income=35000.0;
 $customer.state="Mass";
+Customer.out.println("Customer Created"");
 end
 
 
