@@ -1,2 +1,12 @@
 package xyzhealthcare.healthcareeligibility;
 
+import xyzhealthcare.healthcareeligibility.*;
+
+rule "Create Claim"
+ruleflow-group "EligibilityGroup"
+when
+then
+Claim $claim = new Claim();
+$claim.claimID= 123456;
+$claim.claimDate=1/21/2015;
+$claim.claimAmount=40000.0;
