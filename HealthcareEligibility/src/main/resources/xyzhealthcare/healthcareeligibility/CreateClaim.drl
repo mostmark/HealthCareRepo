@@ -6,7 +6,8 @@ rule "Create Claim"
 ruleflow-group "EligibilityGroup"
 dialect "mvel"
 when
-	$f : Float()
+	$f : Object()
+	not Claim()
 then
 Claim claim = new Claim();
 claim.claimID= 123456;
