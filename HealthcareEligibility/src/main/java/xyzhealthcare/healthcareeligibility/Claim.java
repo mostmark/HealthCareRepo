@@ -11,10 +11,15 @@ public class Claim implements java.io.Serializable
 
    @org.kie.api.definition.type.Label(value = "ClaimID")
    private java.lang.Integer claimID;
+
    @org.kie.api.definition.type.Label(value = "Claim Date")
    private java.util.Date claimDate;
+
    @org.kie.api.definition.type.Label(value = "Claim Amt")
    private java.lang.Float claimAmount;
+
+   @org.kie.api.definition.type.Label(value = "Eligibility")
+   private java.lang.Boolean eligibility;
 
    public Claim()
    {
@@ -50,12 +55,23 @@ public class Claim implements java.io.Serializable
       this.claimAmount = claimAmount;
    }
 
+   public java.lang.Boolean getEligibility()
+   {
+      return this.eligibility;
+   }
+
+   public void setEligibility(java.lang.Boolean eligibility)
+   {
+      this.eligibility = eligibility;
+   }
+
    public Claim(java.lang.Integer claimID, java.util.Date claimDate,
-         java.lang.Float claimAmount)
+         java.lang.Float claimAmount, java.lang.Boolean eligibility)
    {
       this.claimID = claimID;
       this.claimDate = claimDate;
       this.claimAmount = claimAmount;
+      this.eligibility = eligibility;
    }
 
 }
