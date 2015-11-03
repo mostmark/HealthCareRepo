@@ -6,11 +6,11 @@ rule "Create Claim"
 ruleflow-group "EligibilityGroup"
 dialect "mvel"
 when
-	String ( this == "approve" )
+	$f : Float()
 then
 Claim claim = new Claim();
 claim.claimID= 123456;
-claim.claimAmount=40000.0;
+claim.claimAmount= $f;
 insert (claim);
-System.out.println ( "rule fired" );
+System.out.println ( "rule fired "  + claim.claimAmount);
 end
