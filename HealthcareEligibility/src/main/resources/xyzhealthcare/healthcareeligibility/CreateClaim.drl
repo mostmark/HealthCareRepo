@@ -10,3 +10,4 @@ Claim $claim = new Claim();
 $claim.claimID= 123456;
 $claim.claimDate=1/21/2015;
 $claim.claimAmount=40000.0;
+end
