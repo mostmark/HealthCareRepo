@@ -14,3 +14,14 @@ claim.claimAmount= $f;
 insert (claim);
 System.out.println ( "rule fired "  + claim.claimAmount);
 end
+
+
+rule "Debug"
+  ruleflow-group "EligibilityGroup"
+  dialect "mvel"
+    when
+	$o : Object() 
+then
+
+System.out.println ( "debug" + $o);
+end
