@@ -3,6 +3,7 @@ package xyzhealthcare.healthcareeligibility;
 import xyzhealthcare.healthcareeligibility.*;
 
 rule "Create Claim"
+dialect MVEL
 ruleflow-group "EligibilityGroup"
 when
 then
