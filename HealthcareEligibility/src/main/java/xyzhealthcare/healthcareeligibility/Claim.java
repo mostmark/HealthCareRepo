@@ -9,16 +9,13 @@ public class Claim implements java.io.Serializable
 
    static final long serialVersionUID = 1L;
 
-   @org.kie.api.definition.type.Label(value = "ClaimID")
+   @org.kie.api.definition.type.Label("ClaimID")
    private java.lang.Integer claimID;
 
-   @org.kie.api.definition.type.Label(value = "Claim Date")
-   private java.util.Date claimDate;
-
-   @org.kie.api.definition.type.Label(value = "Claim Amt")
+   @org.kie.api.definition.type.Label("Claim Amt")
    private java.lang.Float claimAmount;
 
-   @org.kie.api.definition.type.Label(value = "Eligibility")
+   @org.kie.api.definition.type.Label("Eligibility")
    private java.lang.Boolean eligibility;
 
    public Claim()
@@ -33,16 +30,6 @@ public class Claim implements java.io.Serializable
    public void setClaimID(java.lang.Integer claimID)
    {
       this.claimID = claimID;
-   }
-
-   public java.util.Date getClaimDate()
-   {
-      return this.claimDate;
-   }
-
-   public void setClaimDate(java.util.Date claimDate)
-   {
-      this.claimDate = claimDate;
    }
 
    public java.lang.Float getClaimAmount()
@@ -65,11 +52,10 @@ public class Claim implements java.io.Serializable
       this.eligibility = eligibility;
    }
 
-   public Claim(java.lang.Integer claimID, java.util.Date claimDate,
-         java.lang.Float claimAmount, java.lang.Boolean eligibility)
+   public Claim(java.lang.Integer claimID, java.lang.Float claimAmount,
+         java.lang.Boolean eligibility)
    {
       this.claimID = claimID;
-      this.claimDate = claimDate;
       this.claimAmount = claimAmount;
       this.eligibility = eligibility;
    }
