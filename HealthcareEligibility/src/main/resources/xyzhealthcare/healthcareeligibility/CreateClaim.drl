@@ -6,6 +6,7 @@ rule "Create Claim"
 ruleflow-group "EligibilityGroup"
 dialect "mvel"
 when
+	String ( this == "approve" )
 then
 Claim claim = new Claim();
 claim.claimID= 123456;
