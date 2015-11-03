@@ -3,26 +3,28 @@ package xyzhealthcare.healthcareeligibility;
 import xyzhealthcare.healthcareeligibility.*;
 
 rule "Create Claim"
-ruleflow-group "EligibilityGroup"
-dialect "mvel"
-when
-	$f : Object()
-	not Claim()
-then
-Claim claim = new Claim();
-claim.claimID= 123456;
-claim.claimAmount= $f;
-insert (claim);
-System.out.println ( "rule fired "  + claim.claimAmount);
+	ruleflow-group "EligibilityGroup"
+	dialect "mvel"
+	
+	when
+		$f : Object()
+		not Claim()
+	then
+		Claim claim = new Claim();
+		claim.claimID= 123456;
+		claim.claimAmount= $f;
+		insert (claim);
+		System.out.println ( "rule fired "  + claim.claimAmount);
+		
 end
 
 
 rule "Debug"
-  ruleflow-group "EligibilityGroup"
-  dialect "mvel"
-    when
-	$o : Object() 
-then
+  	ruleflow-group "EligibilityGroup"
+  	dialect "mvel"
+    	when
+		$o : Object() 
+	then
 
-System.out.println ( "debug" + $o);
+		System.out.println ( "debug" + $o);
 end
