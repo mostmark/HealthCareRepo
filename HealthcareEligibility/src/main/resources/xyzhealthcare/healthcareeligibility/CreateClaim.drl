@@ -12,4 +12,5 @@ Claim claim = new Claim();
 claim.claimID= 123456;
 claim.claimAmount=40000.0;
 insert (claim);
+System.out.println ( "rule fired" );
 end
